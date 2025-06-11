@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Twitter, MessageSquare, Settings, HelpCircle } from 'lucide-react';
+import { Home, Twitter, MessageSquare, Settings, HelpCircle, Airplay } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {
@@ -7,10 +7,11 @@ const Sidebar: React.FC = () => {
 
   const menuItems = [
     { icon: <Home size={20} />, route: '/', label: 'Dashboard' },
-    { icon: <Twitter size={20} />, route: 'twitter', label: 'Twitter Monitoring' },
-    { icon: <MessageSquare size={20} />, route: 'chat', label: 'Messages' },
-    { icon: <Settings size={20} />, route: '', label: 'Settings' },
-    { icon: <HelpCircle size={20} />, route: '', label: 'Help' },
+    { icon: <Twitter size={20} />, route: '/twitter', label: 'Twitter Monitoring' },
+    { icon: <MessageSquare size={20} />, route: '/chat', label: 'Messages' },
+    { icon: <Airplay size={20} />, route: '/article-scraper', label: 'Article Scraper' },
+    { icon: <Settings size={20} />, route: '/settings', label: 'Settings' },
+    { icon: <HelpCircle size={20} />, route: '/help', label: 'Help' },
   ];
 
   return (
@@ -26,7 +27,7 @@ const Sidebar: React.FC = () => {
             key={index}
             className={`p-3 rounded-xl transition-all duration-200 flex items-center justify-center ${
               location.pathname === item.route
-                ? 'bg-accent-primary text-white'
+                ? 'bg-blue-500 text-white'
                 : 'text-text-secondary hover:text-text-primary hover:bg-background-cardLight'
             }`}
           >

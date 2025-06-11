@@ -5,7 +5,7 @@ interface StatisticsHeaderProps {
   onRefresh: () => void;
 }
 
-const StatisticsHeader: React.FC<StatisticsHeaderProps> = ({ title = "Article Analysis" }) => {
+const StatisticsHeader: React.FC<StatisticsHeaderProps> = ({ title = "Article Scraper" }) => {
   return (
     <div className="flex items-center justify-between mb-6">
       <h1 className="text-3xl font-bold">{title}</h1>
