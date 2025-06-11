@@ -63,7 +63,7 @@ const FALLBACK_DATA: SummaryData = {
   id: "0",
   title: "No Article Analyzed Yet",
   summary:
-    "Analyze an article to see a detailed summary here. The summary will provide an overview of the article's main points and key arguments.",
+    "Analyze an article to see a detailed summary here. The summary will provide an overview of the article's main points and key arguments, helping you quickly grasp the essence of the content without reading the entire text.\n\nYou’ll also see highlights like key quotes, related themes, and major conclusions extracted from the article. Whether it’s a news piece or an academic article, this view streamlines your understanding.\n\nClick on the right arrow to choose a summary and explore the analysis in more detail.",
   readTime: "0 min",
   wordCount: 0,
 }
