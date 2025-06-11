@@ -10,7 +10,7 @@ import StanceAnalysisCard from "./cards/StanceAnalysisCard"
 import NamedEntityCard from "./cards/NamedEntityCard"
 import FluffIndexCard from "./cards/FluffIndexCard"
 import WordFrequencyCard from "./cards/WordFrequencyCard"
-import ArticleAnalysisPanel from "./ArticleAnalysis"
+import ArticleScraperPanel from "./ArticleScraperPanel"
 
 interface AnalysisResult {
   // Summary data
@@ -96,7 +96,7 @@ const Dashboard: React.FC = () => {
     <div className="flex gap-6 px-6 py-6">
       {/* Main Content Area */}
       <div className="flex-[0.65] space-y-6">
-        <StatisticsHeader onRefresh={() => console.log("Refreshing dashboard data...")} />
+        <StatisticsHeader title={"Article Scraper"} onRefresh={() => console.log("Refreshing dashboard data...")} />
 
         <div className="grid grid-cols-2 gap-6">
           <div className="col-span-2">
@@ -147,7 +147,7 @@ const Dashboard: React.FC = () => {
 
       {/* Right Panel - Article Analysis */}
       <div className="flex-[0.35] sticky top-0 h-[calc(100vh-6rem)]">
-        <ArticleAnalysisPanel onAnalysisStart={handleAnalysisStart} onAnalysisComplete={handleAnalysisComplete} />
+        <ArticleScraperPanel onAnalysisStart={handleAnalysisStart} onAnalysisComplete={handleAnalysisComplete} />
       </div>
     </div>
   )

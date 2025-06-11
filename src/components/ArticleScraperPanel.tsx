@@ -83,7 +83,7 @@ interface AnalysisResult {
   }
 }
 
-interface ArticleAnalysisPanelProps {
+interface ArticleScraperPanelProps {
   onAnalysisStart?: () => void
   onAnalysisComplete?: (result: AnalysisResult) => void
 }
@@ -110,7 +110,7 @@ const mediaHouses = [
   { id: "media5", name: "Media House 5", description: "Technology news source" },
 ]
 
-const ArticleAnalysisPanel: React.FC<ArticleAnalysisPanelProps> = ({ onAnalysisStart, onAnalysisComplete }) => {
+const ArticleScraperPanel: React.FC<ArticleScraperPanelProps> = ({ onAnalysisStart, onAnalysisComplete }) => {
   const [activeTab, setActiveTab] = useState("analyze")
   const [articleURL, setArticleURL] = useState("")
   const [selectedMediaHouse, setSelectedMediaHouse] = useState("")
@@ -725,4 +725,4 @@ const ArticleAnalysisPanel: React.FC<ArticleAnalysisPanelProps> = ({ onAnalysisS
   )
 }
 
-export default ArticleAnalysisPanel
+export default ArticleScraperPanel
